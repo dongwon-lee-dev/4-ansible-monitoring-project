@@ -1,0 +1,8 @@
+[central_server]
+localhost ansible_connection=local
+
+[all_servers]
+localhost ansible_connection=local
+192.168.50.120
+192.168.50.67
+192.168.50.84

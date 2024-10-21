@@ -1,0 +1,9 @@
+---
+- hosts: all_servers
+  become: yes
+  roles:
+    - prometheus_node_exporter
+- hosts: central_server
+  become: yes
+  roles:
+    - grafana
