@@ -2,7 +2,7 @@
 
 ✨ **Technologies**: Ansible, Prometheus, Prometheus Node Exporter, Grafana
 
-**Summary**: Using Ansible, install Prometheus Node Exporter on all on-premises Raspberry Pis, and set up Prometheus and Grafana on a central Raspberry Pi to collect metrics from the Node Exporters of the other Raspberry Pis, creating a monitoring solution.
+**Summary**: Using Ansible, install Prometheus Node Exporter on all on-premises Raspberry Pis / VMware Virtualization Linux server, and set up Prometheus and Grafana on a central Raspberry Pi to collect metrics from the Node Exporters of the other Raspberry Pis, creating a monitoring solution.
 
 **Project folder structure**
 ```bash
@@ -214,7 +214,7 @@ version: 0.16.0
 
 * Change accordingly
 Raspberry Pi: linux-armv7
-AWS EC2: linux-amd64
+Linux Server, AWS EC2: linux-amd64
 
 ## 4) Set up Prometheus Role
 **templates/init.service.j2**
@@ -348,7 +348,7 @@ version: "2.3.2"
 
 * Change accordingly
 Raspberry Pi: linux-armv7
-AWS EC2: linux-amd64
+Linux Server, AWS EC2: linux-amd64
 
 **handlers/main.yml**
 ``` yaml
@@ -421,7 +421,7 @@ version: 5.4.3
 
 ## 6) Run Ansible Playbook
 ```bash
-ansible-playbook -i inventory_file playbook.yml -K [become password]
+ansible-playbook -i inventory_file playbook.yml -K [sudo password]
 ```
 
 
